@@ -1,0 +1,287 @@
+@media only screen and (min-width: 1280px) {
+    .body_comple {
+        display: flex;
+        position: relative;
+    }
+    .col1 {
+        height: 100%;
+        width: 100%;
+        margin-left: 10%;
+        margin-right: 1%;
+        display: block;
+    }
+    .col1_contenedor {
+        text-align: center;
+        display: block;
+        height: 100%;
+        margin-top: 50px;
+    }
+    .contenedor_imgu {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .contenedor_imgu img {
+        border: 2px #E5E7E8 solid;
+        width: 520px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    .contenedor_varios {
+        display: flex;
+        margin: 10px;
+        justify-content: space-around;
+    }
+    cursor {
+        cursor: pointer;
+    }
+    .varios_indi {
+        margin: 5px;
+    }
+    .varios_indi img {
+        border: 2px #E5E7E8 solid;
+        width: 160px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    .contenedor_especi {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    .contenedor_especi p {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .especi_produ {
+        padding: 10px;
+    }
+    .col2 {
+        height: 100%;
+        width: 100%;
+        margin-right: 10%;
+        margin-left: 1%;
+    }
+    .title {
+        margin-top: 50px;
+    }
+    .title_p {
+        color: red;
+        margin-bottom: 0;
+        font-size: 13px;
+    }
+    .title h4 {
+        color: #797A7B;
+    }
+    .price {
+        margin-top: 35px;
+        display: block;
+        justify-content: left;
+    }
+    .price p {
+        font-size: 12px;
+        color: #797A7B;
+        text-align: left;
+        margin-bottom: 5px;
+        font-family: "Circular Std Medium";
+    }
+    .title_t {
+        text-align: left;
+        font-size: 32px;
+        margin-bottom: 0;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .information {
+        display: flex;
+        margin: 40px 0px 10px 0px;
+    }
+    .information a {
+        margin-right: 25px;
+        color: #797A7B;
+        font-family: "Circular Std Book";
+        font-size: 18px;
+        cursor: pointer;
+    }
+    .contenido_inform p {
+        font-size: 13px;
+        font-family: "Circular Std Medium";
+    }
+    .choose {
+        margin-top: 10%;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .theme {
+        display: flex;
+        justify-content: space-between;
+    }
+    .theme_color {
+        border: 2px #E5E7E8 solid;
+        border-radius: 8px;
+        width: 46%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .theme_color:hover {
+        border: 2px gray solid;
+    }
+    .theme_color::selection {
+        outline-color: red;
+    }
+    .theme_color p {
+        margin-left: 10px;
+        font-weight: bold;
+        font-family: "Circular Std Book";
+    }
+    .theme_conte {
+        color: #797A7B;
+        font-size: 12px;
+        font-family: "Circular Std Medium";
+    }
+    .elect {
+        margin-top: 10%;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .elect_box {
+        display: block;
+    }
+    .elect_color {
+        border: 2px #E5E7E8 solid;
+        font-size: 12px;
+        font-family: "Circular Std Medium";
+        border-radius: 8px;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .elect_color p {
+        margin-left: 15px;
+        margin-top: 10px;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .elect_conte {
+        font-family: "Circular Std Medium";
+        font-weight: bold;
+    }
+    .elect_conte_e {
+        font-family: "Circular Std Medium";
+        color: #797A7B;
+    }
+    .elect_color_num {
+        position: relative;
+    }
+    .elect_color_num p {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    .features {
+        margin-top: 10%;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .features_box {
+        display: block;
+    }
+    .feature_box_conten {
+        border: 2px #E5E7E8 solid;
+        font-size: 12px;
+        font-family: "Circular Std Medium";
+        border-radius: 8px;
+        margin-bottom: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .feature_box_conten p {
+        margin-left: 15px;
+        margin-top: 10px;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .box_contend_fea {
+        margin-right: 10px;
+        display: block;
+    }
+    .specifi {
+        margin-top: 10%;
+        font-family: "Circular Std Bold";
+        font-weight: bold;
+    }
+    .bloque_specifi_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        margin: 10px 0px 10px 0px;
+    }
+    .space {
+        margin-top: 30%;
+    }
+    .footer {
+        position: fixed;
+        width: 100%;
+        height: 12%;
+        bottom: 0;
+        padding: 20px 0px 0px 0px;
+        background-color: white;
+    }
+    .footer_seccion {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0px 50px 0px 50px;
+    }
+    .texto {
+        margin-left: 80px;
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+    }
+    .button {
+        margin-right: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .bloque {
+        padding: 10px;
+    }
+    .bloque_price {
+        text-align: right;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .footer p {
+        margin-top: 4px;
+        font-size: 10px;
+        font-weight: normal;
+        color: #949799;
+    }
+    .butt {
+        border-radius: 10px;
+        background: #1798F1;
+        text-align: center;
+        font: normal bold 12px Montserrat;
+        color: white;
+        padding: 15px;
+        width: 90px;
+        outline: none;
+        position: relative;
+        top: 1em;
+    }
+    .butt:hover {
+        background: #7EC6F6;
+        color: white;
+    }
+    .butt:focus {
+        box-shadow: 2px 4px 10px 0px black;
+    }
+    .selecionado {
+        text-decoration: underline;
+        color: black;
+        font-weight: bold;
+    }
+}

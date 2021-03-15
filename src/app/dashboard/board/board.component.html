@@ -1,0 +1,19 @@
+<div>
+    <app-app-navbar></app-app-navbar>
+</div>
+<div class="row">
+    <div class="col">
+        <mat-grid-list cols="3" rowHeight="350px">
+            <mat-grid-tile *ngFor="let dato of datos">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/img/Ima1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{dato.title}}</h5>
+                        <p class="card-text">{{dato.overview|slice:0:50}}...</p>
+                        <a [routerLink]="['/product', dato.id]" class="btn btn-primary">Ver más...</a>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</div>
