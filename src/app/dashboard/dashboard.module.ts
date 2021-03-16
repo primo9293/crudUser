@@ -9,7 +9,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { SharedModule } from '../shared/shared.module';
 import { TextsComponent } from './product-detail/texts/texts.component';
 
-
 @NgModule({
   declarations: [
   BoardComponent,

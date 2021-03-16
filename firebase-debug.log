@@ -1,0 +1,25 @@
+[debug] [2021-03-16T03:13:19.605Z] ----------------------------------------------------------------------
+[debug] [2021-03-16T03:13:19.609Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\carpr\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-03-16T03:13:19.610Z] CLI Version:   8.12.1
+[debug] [2021-03-16T03:13:19.610Z] Platform:      win32
+[debug] [2021-03-16T03:13:19.610Z] Node Version:  v12.18.0
+[debug] [2021-03-16T03:13:19.614Z] Time:          Mon Mar 15 2021 22:13:19 GMT-0500 (GMT-05:00)
+[debug] [2021-03-16T03:13:19.615Z] ----------------------------------------------------------------------
+[debug] [2021-03-16T03:13:19.615Z] 
+[debug] [2021-03-16T03:13:19.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-16T03:13:19.773Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\carpr\OneDrive\Documentos\Ejercicios\Ejercicios\serempre\serempreFront
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+

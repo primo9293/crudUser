@@ -1,205 +1,194 @@
 <div class="body_comple">
-    <div class="col1">
-        <div class="col1_contenedor">
-            <div class="contenedor_imgu">
-                <img #imagen [src]="imagenSelec" alt="">
-            </div>
-            <div class="contenedor_varios">
-                <div class="varios_indi cursor" (click)="clickImage('1')">
-                    <img class="cursor" src="./../../../assets/img/Ima1.jpg" alt="">
+    <div class="logo">
+        <img src="./../../../assets/img/serempre.png" alt="">
+    </div>
+    <div class="columnas">
+        <div class="col1">
+            <div class="col1_contenedor">
+                <div class="contenedor_imgu">
+                    <img #imagen [src]="imagenSelec" alt="">
                 </div>
-                <div class="varios_indi cursor" (click)="clickImage('2')">
-                    <img src="./../../../assets/img/Ima2.jpg" alt="">
+                <div class="contenedor_varios">
+                    <div class="varios_indi" (click)="clickImage('1')" [class.selecionadoN]="'1' === selectedN">
+                        <img class="cursor" src="./../../../assets/img/Ima1.jpg" alt="">
+                    </div>
+                    <div class="varios_indi" (click)="clickImage('2')" [class.selecionadoN]="'2' === selectedN">
+                        <img src="./../../../assets/img/Ima2.jpg" alt="">
+                    </div>
+                    <div class="varios_indi" (click)="clickImage('3')" [class.selecionadoN]="'3' === selectedN">
+                        <img src="./../../../assets/img/Ima3.jpg" alt="">
+                    </div>
                 </div>
-                <div class="varios_indi cursor" (click)="clickImage('3')">
-                    <img src="./../../../assets/img/Ima3.jpg" alt="">
-                </div>
-            </div>
-            <div class="contenedor_especi">
-                <div class="especi_produ">
-                    <span class="material-icons">
+                <div class="contenedor_especi">
+                    <div class="especi_produ">
+                        <span class="material-icons">
                         touch_app
                     </span>
-                    <p>Customizable Touch Controls</p>
-                </div>
-                <div class="especi_produ">
-                    <span class="material-icons">
+                        <p>Customizable Touch Controls</p>
+                    </div>
+                    <div class="especi_produ">
+                        <span class="material-icons">
                         graphic_eq
                     </span>
-                    <p>Built-in Equalizer</p>
-                </div>
-                <div class="especi_produ">
-                    <span class="material-icons">
+                        <p>Built-in Equalizer</p>
+                    </div>
+                    <div class="especi_produ">
+                        <span class="material-icons">
                         volume_up
                     </span>
-                    <p>Active Noise Cancellation</p>
+                        <p>Active Noise Cancellation</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="col2">
-        <div class="title">
-            <p class="title_p">
-                NEW RELEASE
-            </p>
-            <p class="title_t">
-                MOMENTUM True Wireless 2
-            </p>
-            <h4>
-                Earbuds that put sound first
-            </h4>
-        </div>
+        <div class="col2">
+            <div class="title">
+                <p class="title_p">
+                    NEW RELEASE
+                </p>
+                <p class="title_t">
+                    MOMENTUM True Wireless 2
+                </p>
+                <h4>
+                    Earbuds that put sound first
+                </h4>
+            </div>
 
-        <div class="price">
-            <p>
-                STARTING AT
-            </p>
-            <h1>
-                $295.95
-            </h1>
-        </div>
+            <div class="price">
+                <p>
+                    STARTING AT
+                </p>
+                <h1>
+                    $295.95
+                </h1>
+            </div>
 
-        <div class="information">
-            <a *ngFor="let dato of datos" (click)="cambiotext(dato.id)">
+            <div class="information">
+                <a *ngFor="let dato of datos; let i = index" (click)="cambiotext(dato.id)" [class.selecionado]="dato.id === selectedA">
                 {{dato.name}}
-            </a>
-            <!--  <a (click)="cambiotext('features')">
-                Features
-            </a>
-            <a (click)="cambiotext('box')">
-                What's in the box?
-            </a> -->
-        </div>
+                </a>
+            </div>
 
-        <div class="contenido_inform">
-            <p>
-                <app-texts [page]='pagina'></app-texts>
-            </p>
-        </div>
+            <div class="contenido_inform">
+                <p>
+                    <app-texts [page]='pagina'></app-texts>
+                </p>
+            </div>
 
-        <div class="choose">
-            <p>Choose your finish</p>
-        </div>
-        <div class="theme">
-            <div class="theme_color">
-                <p>Ivory White</p>
-                <div class="theme_conte">
-                    <p>For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True </p>
-                </div>
+            <div class="choose">
+                <p>Choose your finish</p>
             </div>
-            <div class="theme_color">
-                <p>Matte Black</p>
-                <div class="theme_conte">
-                    <p>Of all of the celestial bodies that capture our attention and fascination as astronomers</p>
+            <div class="theme">
+                <div class="theme_color" (click)="themeColo('White')" [class.selecionadoT]="'White' === selectedTC">
+                    <p>Ivory White</p>
+                    <div class="theme_conte">
+                        <p>For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True </p>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="elect">
-            <p>Would you like to add extended warranty coverage?.</p>
-        </div>
-        <div class="elect_box">
-            <div class="elect_color">
-                <div class="elect_conte">
-                    <p>2 years coverage</p>
-                    <p class="elect_conte_e">For the past 75 years, Sennheiser has put sound first</p>
-                </div>
-            </div>
-            <div class="elect_color">
-                <div class="elect_conte">
-                    <p>3 years coverage</p>
-                    <p class="elect_conte_e">For the past 75 years, Sennheiser has put sound first</p>
-                </div>
-                <div class="elect_color_num">
-                    <p>+$75</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="features">
-            <p>Features.</p>
-        </div>
-        <div class="features_box">
-            <div class="feature_box_conten">
-                <div class="box_contend_fea">
-                    <p>Voice Assistant support</p>
-                </div>
-            </div>
-            <div class="feature_box_conten">
-                <div class="box_contend_fea">
-                    <p>Customizable controls</p>
-                </div>
-                <div class="box_contend_fea">
-                    <p>+$25</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="specifi">
-            <p>Specifications.</p>
-        </div>
-        <div class="bloque_specifi">
-            <div class="bloque_specifi_content">
-                <div class="content_title">
-                    Dimensions
-                </div>
-                <div class="content_especifi">
-                    76.8 x 43.8 x 34.7 mm(earbuds and charging case)
+                <div class="theme_color" (click)="themeColo('Black')" [class.selecionadoT]="'Black' === selectedTC">
+                    <p>Matte Black</p>
+                    <div class="theme_conte">
+                        <p>Of all of the celestial bodies that capture our attention and fascination as astronomers</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="bloque_specifi_content">
-                <div class="content_title">
-                    USB Standard
-                </div>
-                <div class="content_especifi">
-                    USB-C
+            <div class="elect">
+                <p>Would you like to add extended warranty coverage?.</p>
+            </div>
+            <div class="elect_box">
+                <div class="elect_color" *ngFor="let coverage of coverages" (click)="cambioCove(coverage.id)" [class.selectedCo]="coverage.id === selectedCove">
+                    <div class="elect_conte">
+                        <p>{{coverage.text}}</p>
+                        <p class="elect_conte_e">{{coverage.description}}</p>
+                    </div>
+                    <div class="elect_color_num">
+                        <p>{{coverage.extended}}</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="bloque_specifi_content">
-                <div class="content_title">
-                    Power supply
-                </div>
-                <div class="content_especifi">
-                    Sennheiser 7mm dynamic driver
+            <div class="features">
+                <p>Features.</p>
+            </div>
+            <div class="features_box">
+                <div class="feature_box_conten" *ngFor="let feature of features" (click)="cambioFeatures(feature.id)" [class.selectedFe]="feature.id === selectedFeat">
+                    <div class="box_contend_fea">
+                        <p>{{feature.text}}</p>
+                    </div>
+                    <div class="box_contend_fea">
+                        <p>{{feature.extended}}</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="bloque_specifi_content">
-                <div class="content_title">
-                    Frequency response (Microphone)
+            <div class="specifi">
+                <p>Specifications.</p>
+            </div>
+            <div class="bloque_specifi">
+                <div class="bloque_specifi_content">
+                    <div class="content_title">
+                        Dimensions
+                    </div>
+                    <div class="content_especifi">
+                        76.8 x 43.8 x 34.7 mm(earbuds and charging case)
+                    </div>
                 </div>
-                <div class="content_especifi">
-                    100 Hz to 10 10kHz
+
+                <div class="bloque_specifi_content">
+                    <div class="content_title">
+                        USB Standard
+                    </div>
+                    <div class="content_especifi">
+                        USB-C
+                    </div>
                 </div>
+
+                <div class="bloque_specifi_content">
+                    <div class="content_title">
+                        Power supply
+                    </div>
+                    <div class="content_especifi">
+                        Sennheiser 7mm dynamic driver
+                    </div>
+                </div>
+
+                <div class="bloque_specifi_content">
+                    <div class="content_title">
+                        Frequency response (Microphone)
+                    </div>
+                    <div class="content_especifi">
+                        100 Hz to 10 10kHz
+                    </div>
+                </div>
+
+                <div class="bloque_specifi_content">
+                    <div class="content_title">
+                        Frequency response
+                    </div>
+                    <div class="content_especifi">
+                        5 - 21,000 Hz
+                    </div>
+                </div>
+
+                <div class="bloque_specifi_content">
+                    <div class="content_title">
+                        Noise cancellation
+                    </div>
+                    <div class="content_especifi">
+                        Single-Mic ANC per earbud side
+                    </div>
+                </div>
+
             </div>
 
-            <div class="bloque_specifi_content">
-                <div class="content_title">
-                    Frequency response
-                </div>
-                <div class="content_especifi">
-                    5 - 21,000 Hz
-                </div>
+            <div class="space">
             </div>
-
-            <div class="bloque_specifi_content">
-                <div class="content_title">
-                    Noise cancellation
-                </div>
-                <div class="content_especifi">
-                    Single-Mic ANC per earbud side
-                </div>
-            </div>
-
-        </div>
-
-        <div class="space">
         </div>
     </div>
 </div>
+
 
 
 <div class="footer">

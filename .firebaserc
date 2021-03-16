@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-app-7b9a7": {
+      "hosting": {
+        "serempreFront": [
+          "login-app-7b9a7"
+        ]
+      }
+    }
+  }
+}

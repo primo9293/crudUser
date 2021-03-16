@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-board',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css']
 })
 export class BoardComponent implements OnInit {
+
+  productsArr = [];
 
   datos = [{
     id: 1,
@@ -16,9 +19,18 @@ export class BoardComponent implements OnInit {
     what: 'Dos audifonos y cargados'
   }]
 
-  constructor() { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.getProductos()
+  }
+
+  getProductos(){
+    this.productService.getProductosFire()
+      .subscribe(resp => {
+        // console.log(resp);
+        this.productsArr = resp
+      })
   }
 
 }

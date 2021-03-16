@@ -4,23 +4,26 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { AppNavbarComponent } from './components/app-navbar/app-navbar.component';
 import { MaterialModule } from './material/material.module';
+import { NoimagePipe } from './pipe/noimage.pipe';
 
 
 
 @NgModule({
   declarations: [
   AppNavbarComponent,
+  NoimagePipe
 ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
   ],
   exports: [
     AppNavbarComponent,
-    MaterialModule
+    MaterialModule,
+    NoimagePipe
   ]
 })
 export class SharedModule { }
