@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params} from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ProductService } from '../../services/product.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product-detail',
@@ -63,7 +64,8 @@ export class ProductDetailComponent implements OnInit {
   text = 'For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday.'
 
   constructor(private activeRoute: ActivatedRoute,
-              private productService: ProductService) { }
+              private productService: ProductService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.pagina = this.text
@@ -102,5 +104,25 @@ export class ProductDetailComponent implements OnInit {
 
   cambioFeatures(num: number){
     this.selectedFeat = num;
+  }
+
+  comprar(){
+    Swal.fire({
+      title: 'Agregado al carrito',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    }).then(() => {
+      // console.log('Agregado');
+      this.router.navigate(['/board']);
+    })
+    .catch((err) => {
+      console.log('err',err);
+      Swal.fire('Error','Error hable con el administrador','error')
+    });
+
   }
 }

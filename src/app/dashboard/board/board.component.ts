@@ -21,14 +21,24 @@ export class BoardComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
 
+  datosLo
+
   ngOnInit(): void {
     this.getProductos()
+    this.cargarDatos()
+  }
+
+  cargarDatos(){
+   const carga = setInterval( () => {
+     this.datosLo = this.datos
+    }, 1500);
+   
   }
 
   getProductos(){
     this.productService.getProductosFire()
       .subscribe(resp => {
-        // console.log(resp);
+        console.log(resp);
         this.productsArr = resp
       })
   }

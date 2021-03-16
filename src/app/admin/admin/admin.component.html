@@ -29,15 +29,20 @@
                     <td mat-cell *matCellDef="let product"> {{product.titulo}} </td>
                 </ng-container>
 
+                <ng-container matColumnDef="descripcion">
+                    <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+                    <td mat-cell *matCellDef="let product"> {{product.descripcion}} </td>
+                </ng-container>
+
                 <ng-container matColumnDef="price">
                     <th mat-header-cell *matHeaderCellDef> Precio </th>
-                    <td mat-cell *matCellDef="let product"> {{product.descripcion}} </td>
+                    <td mat-cell *matCellDef="let product"> ${{product.price}} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="actions">
                     <th mat-header-cell *matHeaderCellDef> Actions </th>
                     <td mat-cell *matCellDef="let product">
-                        <button mat-raised-button color="warn" (click)="deleteProduct(product.id)">Eliminar</button>
+                        <button mat-raised-button color="warn" (click)="deleteProduct(product.$key)">Eliminar</button>
                     </td>
                 </ng-container>
 

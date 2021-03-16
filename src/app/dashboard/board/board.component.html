@@ -1,10 +1,10 @@
 <div>
     <app-app-navbar></app-app-navbar>
 </div>
-<div class="row">
+<div class="row animated fadeIn fast" *ngIf="datosLo">
     <div class="col">
         <mat-grid-list cols="3" rowHeight="350px">
-            <mat-grid-tile *ngFor="let dato of datos">
+            <mat-grid-tile *ngFor="let dato of datosLo">
                 <div class="card" style="width: 18rem;">
                     <img src="./assets/img/Ima1.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -18,12 +18,25 @@
                 <div class="card" style="width: 18rem;">
                     <img [src]="product.img | noimage" class="w100" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{product.title}}</h5>
+                        <h5 class="card-title">{{product.titulo}}</h5>
                         <p class="card-text">{{product.descripcion|slice:0:50}}...</p>
                         <a class="btn btn-primary">Ver más...</a>
                     </div>
                 </div>
             </mat-grid-tile>
         </mat-grid-list>
+    </div>
+</div>
+
+<div class="row animated fadeIn fast mt-5" *ngIf="!datosLo">
+    <div class="col-12">
+        <div class="centrar">
+            <mat-spinner></mat-spinner>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="centrar">
+            <p>Cargando datos...</p>
+        </div>
     </div>
 </div>

@@ -74,14 +74,14 @@ export class AuthService {
 
   validarToken(){
     let tokenUs = localStorage.getItem('user')
-    console.log('token',tokenUs);
+    // console.log('token',tokenUs);
     let dato: Boolean
     if(tokenUs){
       dato = true
     }else{
       dato = false
     }
-    console.log('dato',dato);
+    // console.log('dato',dato);
     return dato
   }
 

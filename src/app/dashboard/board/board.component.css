@@ -1,3 +1,9 @@
 .w100 {
     width: 60%;
 }
+
+.centrar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

@@ -24,7 +24,7 @@
         <div class="form-group row">
             <mat-form-field class="example-full-width">
                 <mat-label>Precio</mat-label>
-                <input matInput placeholder="" type="text" formControlName="price">
+                <input matInput placeholder="" type="number" formControlName="price">
                 <mat-error *ngIf="priceField.hasError('required')">
                     Campo requerido
                 </mat-error>

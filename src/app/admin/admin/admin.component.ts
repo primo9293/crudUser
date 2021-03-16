@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class AdminComponent implements OnInit {
 
   productsArr = [];
-  displayedColumns: string[] = ['title', 'price', 'actions'];
+  displayedColumns: string[] = ['title', 'descripcion', 'price', 'actions'];
 
 
   constructor(private authService: AuthService,
@@ -31,6 +31,7 @@ export class AdminComponent implements OnInit {
   }
 
   deleteProduct(id: string) {
+    console.log(id);
     this.productService.deleteProductoFire(id)
         .then(() => {
           Swal.fire(
@@ -38,6 +39,7 @@ export class AdminComponent implements OnInit {
             `Producto eliminado exitoso`,
             'success'
           );
+          this.getProductos()
         })
         .catch((err) => {
           console.log(err);
