@@ -33,26 +33,54 @@ export class ProductDetailComponent implements OnInit {
       id: 1,
       text: '2 years coverage',
       description: 'For the past 75 years, Sennheiser has put sound first',
-      extended: ''
+      extended: null
     },
     {
       id: 2,
       text: '3 years coverage',
       description: 'For the past 75 years, Sennheiser has put sound first',
-      extended: '+$75'
+      /* extended: '+$75' */
+      extended: 75
     }
   ]
   features=[
     {
       id: 1,
       text: 'Voice Assistant support',
-      extended: ''
+      extended: null
     },
     {
       id: 2,
       text: 'Customizable controls',
-      extended: '+$25'
+      // extended: '+$25'
+      extended: 25
     }
+  ]
+  specifications=[
+    {
+      attributo: 'Dimensions',
+      detalle: '76.8 x 43.8 x 34.7 mm(earbuds and charging case)'
+    },
+    {
+      attributo: 'USB Standard',
+      detalle: 'USB-C'
+    },
+    {
+      attributo: 'Power supply',
+      detalle: 'Sennheiser 7mm dynamic driver'
+    },
+    {
+      attributo: 'Frequency response (Microphone)',
+      detalle: '100 Hz to 10 10kHz'
+    },
+    {
+      attributo: 'Frequency response',
+      detalle: '5 - 21,000 Hz'
+    },
+    {
+      attributo: 'Noise cancellation',
+      detalle: 'Single-Mic ANC per earbud side'
+    },
   ]
   selectedA = 1
   selectedN = '1'
@@ -62,6 +90,10 @@ export class ProductDetailComponent implements OnInit {
   id: any
   imagenSelec: string = `./../../../assets/img/Ima1.jpg`
   text = 'For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday.'
+  precio_ini= 295.95;
+  precio_covera= 0;
+  precio_feature= 0;
+  precio_total= 0;
 
   constructor(private activeRoute: ActivatedRoute,
               private productService: ProductService,
@@ -69,6 +101,7 @@ export class ProductDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.pagina = this.text
+    this.precio_total = this.precio_ini
   }
 
   getProductos(){
@@ -100,10 +133,24 @@ export class ProductDetailComponent implements OnInit {
 
   cambioCove(num: number){
     this.selectedCove = num;
+    console.log(num);
+    let a = this.coverages.filter(ele => ele.id === num )
+    console.log(a);
+    this.precio_covera = a[0].extended  
+    console.log(this.precio_covera);
+    this.precioTotal()  
   }
 
   cambioFeatures(num: number){
     this.selectedFeat = num;
+    let a = this.features.filter(ele => ele.id === num )
+    this.precio_feature = a[0].extended
+    this.precioTotal()  
+  }
+
+  precioTotal(){
+    this.precio_total = 0
+    this.precio_total = this.precio_ini + this.selectedCove + this.precio_feature
   }
 
   comprar(){

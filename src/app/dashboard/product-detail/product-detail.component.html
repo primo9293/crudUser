@@ -21,21 +21,24 @@
                 </div>
                 <div class="contenedor_especi">
                     <div class="especi_produ">
-                        <span class="material-icons">
+                        <!-- <span class="material-icons">
                         touch_app
-                    </span>
+                    </span> -->
+                        <img src="./../../../assets/img/ctc.svg" alt="">
                         <p>Customizable Touch Controls</p>
                     </div>
                     <div class="especi_produ">
-                        <span class="material-icons">
+                        <!-- <span class="material-icons">
                         graphic_eq
-                    </span>
+                    </span> -->
+                        <img src="./../../../assets/img/biesvg.svg" alt="">
                         <p>Built-in Equalizer</p>
                     </div>
                     <div class="especi_produ">
-                        <span class="material-icons">
+                        <!-- <span class="material-icons">
                         volume_up
-                    </span>
+                    </span> -->
+                        <img src="./../../../assets/img/anc.svg" alt="">
                         <p>Active Noise Cancellation</p>
                     </div>
                 </div>
@@ -104,7 +107,7 @@
                         <p class="elect_conte_e">{{coverage.description}}</p>
                     </div>
                     <div class="elect_color_num">
-                        <p>{{coverage.extended}}</p>
+                        <p *ngIf="coverage.extended !== null">+ {{coverage.extended | currency:'$':'symbol':'.0-0'}}</p>
                     </div>
                 </div>
             </div>
@@ -118,7 +121,7 @@
                         <p>{{feature.text}}</p>
                     </div>
                     <div class="box_contend_fea">
-                        <p>{{feature.extended}}</p>
+                        <p *ngIf="feature.extended !== null">+ {{feature.extended | currency:'$':'symbol':'.0-0'}}</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +130,15 @@
                 <p>Specifications.</p>
             </div>
             <div class="bloque_specifi">
-                <div class="bloque_specifi_content">
+                <div class="bloque_specifi_content" *ngFor="let specification of specifications">
+                    <div class="content_title">
+                        {{specification.attributo}}
+                    </div>
+                    <div class="content_especifi">
+                        {{specification.detalle}}
+                    </div>
+                </div>
+                <!-- <div class="bloque_specifi_content">
                     <div class="content_title">
                         Dimensions
                     </div>
@@ -179,7 +190,7 @@
                     <div class="content_especifi">
                         Single-Mic ANC per earbud side
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -207,7 +218,8 @@
 
         <div class="button">
             <div class="bloque">
-                <div class="bloque_price">$295.95</div>
+                <!-- <div class="bloque_price">$295.95</div> -->
+                <div class="bloque_price">${{precio_total}}</div>
                 <p>Need financing? Learn more</p>
             </div>
             <div class="bloque">

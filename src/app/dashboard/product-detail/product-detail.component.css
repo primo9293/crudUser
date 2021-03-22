@@ -1,3 +1,6 @@
+@import url(//db.onlinewebfonts.com/c/06d1b1518a180e5a9cca2c23401ec40a?family=Circular+Std+Bold);
+@import url(//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book);
+@import url(//db.onlinewebfonts.com/c/9475d6a0b79c164f9f605673714e75d9?family=Circular+Std+Medium);
 .body_comple {
     display: block;
     position: relative;
@@ -49,7 +52,7 @@
 .contenedor_imgu img {
     border: 2px #E5E7E8 solid;
     width: 95%;
-    height: 300px;
+    height: 280px;
     border-radius: 10px;
 }
 
@@ -59,21 +62,42 @@
     justify-content: space-around;
 }
 
-cursor {
-    cursor: pointer;
-}
-
 .varios_indi {
     margin: 5px;
     cursor: pointer;
+    width: 100%;
+    height: 50%;
+    /* width: 160px;
+    height: 100px; */
+    /* position: absolute;
+    z-index: 1; */
+    border: 2px #E5E7E8 solid;
+    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 
 .varios_indi img {
-    border: 2px #E5E7E8 solid;
-    width: 160px;
+    /* border: 2px #E5E7E8 solid; */
+    width: 100%;
     height: 100px;
     border-radius: 10px;
+    /* position: absolute;
+    z-index: 1; */
+    /* width: 100%; */
+    /* width: 100%;
+    height: 50%; */
 }
+
+
+/* .varios_indi img:hover {
+    border: 2px #797A7B solid;
+    border-radius: 10px;
+}
+
+.varios_indi img:active {
+    border: 2px #1798F1 solid;
+    border-radius: 10px;
+} */
 
 .varios_indi:hover {
     border: 2px #797A7B solid;
@@ -93,11 +117,20 @@ cursor {
 
 .contenedor_especi p {
     font-size: 12px;
-    font-weight: bold;
+    /* font-weight: bold; */
+    /* font-family: "Circular Std Book"; */
+    font-family: "Circular Std Medium";
+    /* font-family: "Circular Std Bold"; */
 }
 
 .especi_produ {
-    padding: 10px;
+    padding: 5px;
+}
+
+.especi_produ img {
+    margin-bottom: 5%;
+    width: 30%;
+    height: 30%;
 }
 
 .col2 {
@@ -112,13 +145,19 @@ cursor {
 }
 
 .title_p {
-    color: red;
+    color: #e16f7f;
     margin-bottom: 0;
-    font-size: 13px;
+    font-size: 12px;
+    /* font-family: "Circular Std Book"; */
+    font-family: "Circular Std Medium";
 }
 
 .title h4 {
-    color: #797A7B;
+    color: #82868b;
+    font-size: 22px;
+    /* font-family: "Circular Std Medium"; */
+    /* font-family: "Circular Std Bold"; */
+    font-family: "Circular Std Book";
 }
 
 .price {
@@ -128,17 +167,23 @@ cursor {
 }
 
 .price p {
-    font-size: 12px;
+    font-size: 11px;
     color: #797A7B;
     text-align: left;
     margin-bottom: 5px;
-    font-family: "Circular Std Medium";
+    font-family: "Circular Std Book";
+    /* font-family: "Circular Std Medium"; */
+}
+
+.price h1 {
+    font-family: "Circular Std Bold";
 }
 
 .title_t {
     text-align: left;
     font-size: 32px;
     margin-bottom: 0;
+    /* font-family: "Circular Std Bold"; */
     font-family: "Circular Std Bold";
     font-weight: bold;
 }
@@ -151,13 +196,18 @@ cursor {
 .information a {
     margin-right: 25px;
     color: #797A7B;
-    font-family: "Circular Std Book";
+    /* font-family: "Circular Std Book"; */
+    font-family: "Circular Std Medium";
+    /* font-family: "Circular Std Bold"; */
     font-size: 18px;
     cursor: pointer;
 }
 
 .contenido_inform p {
     font-size: 13px;
+    color: #797A7B;
+    /* font-family: "Circular Std Book"; */
+    /* font-family: "Circular Std Bold"; */
     font-family: "Circular Std Medium";
 }
 
@@ -175,9 +225,10 @@ cursor {
 .theme_color {
     border: 2px #E5E7E8 solid;
     border-radius: 8px;
-    width: 46%;
+    width: 48%;
     padding-top: 5%;
     padding-bottom: 5%;
+    font-family: "Circular Std Medium";
     cursor: pointer;
 }
 
@@ -186,21 +237,32 @@ cursor {
 }
 
 .theme_color p {
-    margin-left: 10px;
+    /* margin-left: 10px; */
+    margin: 0px 15px 10px 25px;
     font-weight: bold;
     font-family: "Circular Std Book";
 }
 
 .theme_conte {
+    /*  color: #797A7B;
+    font-size: 12px;
+    font-family: "Circular Std Book"; */
+    /* font-family: "Circular Std Bold"; */
+    /* font-family: "Circular Std Medium"; */
+}
+
+.theme_conte p {
     color: #797A7B;
     font-size: 12px;
-    font-family: "Circular Std Medium";
+    font-family: "Circular Std Book";
+    /* font-family: "Circular Std Bold"; */
+    /* font-family: "Circular Std Medium"; */
 }
 
 .elect {
     margin-top: 10%;
     font-family: "Circular Std Bold";
-    font-weight: bold;
+    /*     font-weight: bold; */
 }
 
 .elect_box {
@@ -233,16 +295,31 @@ cursor {
 .elect_conte {
     font-family: "Circular Std Medium";
     font-weight: bold;
+    margin-top: 2%;
     cursor: pointer;
+    width: 70%;
+    margin-left: -10px;
+}
+
+.elect_conte p {
+    /* font-family: "Circular Std Book"; */
+    font-family: "Circular Std Bold";
+    /* font-family: "Circular Std Medium"; */
+    margin-left: 10%;
 }
 
 .elect_conte_e {
-    font-family: "Circular Std Medium";
+    /* font-family: "Circular Std Medium"; */
+    font-family: "Circular Std Book";
+    font-weight: normal;
     color: #797A7B;
 }
 
 .elect_color_num {
     position: relative;
+    width: 20%;
+    margin-top: 2%;
+    margin-right: 2%;
 }
 
 .elect_color_num p {
@@ -251,10 +328,13 @@ cursor {
     top: 15px;
 }
 
+.price_mas {
+    margin-left: 0px;
+}
+
 .features {
     margin-top: 10%;
     font-family: "Circular Std Bold";
-    font-weight: bold;
 }
 
 .features_box {
@@ -270,6 +350,7 @@ cursor {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    padding: 2%;
 }
 
 .feature_box_conten:hover {
@@ -287,12 +368,14 @@ cursor {
 .box_contend_fea {
     margin-right: 10px;
     display: block;
+    /* font-family: "Circular Std Book"; */
+    /* font-family: "Circular Std Bold"; */
+    font-family: "Circular Std Medium";
 }
 
 .specifi {
     margin-top: 10%;
     font-family: "Circular Std Bold";
-    font-weight: bold;
 }
 
 .bloque_specifi_content {
@@ -301,6 +384,16 @@ cursor {
     align-items: center;
     font-size: 13px;
     margin: 10px 0px 10px 0px;
+}
+
+.content_title {
+    font-family: "Circular Std Bold";
+}
+
+.content_especifi {
+    font-family: "Circular Std Book";
+    /* font-family: "Circular Std Bold"; */
+    /* font-family: "Circular Std Medium"; */
 }
 
 .space {
@@ -321,7 +414,7 @@ cursor {
     justify-content: space-between;
     font-weight: bold;
     font-size: 12px;
-    margin: 0px 50px 0px 50px;
+    margin: 0% 3% 0% 3%;
 }
 
 .texto {
@@ -339,6 +432,9 @@ cursor {
 
 .bloque {
     padding: 10px;
+    /* font-family: "Circular Std Book"; */
+    font-family: "Circular Std Bold";
+    /* font-family: "Circular Std Medium"; */
 }
 
 .bloque_price {
@@ -378,27 +474,28 @@ cursor {
 
 .selecionado {
     text-decoration: underline;
-    color: black;
-    font-weight: bold;
+    text-underline-position: under;
+    /*     text-underline-offset: 3px; */
+    color: black !important;
 }
 
 .selecionadoN {
-    border: 2px #1798F1 solid;
+    border: 2px #1798F1 solid !important;
     border-radius: 10px;
 }
 
 .selecionadoT {
-    border: 2px #1798F1 solid;
+    border: 2px #1798F1 solid !important;
     border-radius: 10px;
 }
 
 .selectedCo {
-    border: 2px #1798F1 solid;
+    border: 2px #1798F1 solid !important;
     border-radius: 10px;
 }
 
 .selectedFe {
-    border: 2px #1798F1 solid;
+    border: 2px #1798F1 solid !important;
     border-radius: 10px;
 }
 
@@ -424,12 +521,30 @@ cursor {
     .contenedor_imgu:hover {
         transform: scale(1.2);
     }
+    .varios_indi {
+        width: 100%;
+        /* height: auto; */
+        /* border: 2px #E5E7E8 solid; */
+        border-radius: 10px;
+        /* border-radius: 2222222222222222222;sssssssssssss */
+    }
     .varios_indi img {
-        width: 130px;
-        height: 80px;
+        /* width: 130px;
+        height: 80px; */
+        /* border: 2px #E5E7E8 solid; */
+        width: 100%;
+        /* max-height: max-content; */
+        border: none;
     }
     .contenedor_especi p {
         font-size: 11px;
+    }
+    /* .especi_produ img {
+        width: 25%;
+        height: 25%;
+    } */
+    .especi_produ p {
+        font-size: 10px;
     }
     .bloque_specifi {
         margin-bottom: 20%;
