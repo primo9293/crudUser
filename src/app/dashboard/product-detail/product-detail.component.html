@@ -6,38 +6,29 @@
         <div class="col1">
             <div class="col1_contenedor">
                 <div class="contenedor_imgu">
-                    <img #imagen [src]="imagenSelec" alt="">
+                    <img class="ima_zoom" #imagen [src]="imagenSelec" alt="">
                 </div>
                 <div class="contenedor_varios">
-                    <div class="varios_indi" (click)="clickImage('1')" [class.selecionadoN]="'1' === selectedN">
+                    <div class="varios_indi" (click)="clickImage('1')" [class.selecionadoN]="'1' === selectedN" tabindex="1">
                         <img class="cursor" src="./../../../assets/img/Ima1.jpg" alt="">
                     </div>
-                    <div class="varios_indi" (click)="clickImage('2')" [class.selecionadoN]="'2' === selectedN">
+                    <div class="varios_indi" (click)="clickImage('2')" [class.selecionadoN]="'2' === selectedN" tabindex="2">
                         <img src="./../../../assets/img/Ima2.jpg" alt="">
                     </div>
-                    <div class="varios_indi" (click)="clickImage('3')" [class.selecionadoN]="'3' === selectedN">
+                    <div class="varios_indi" (click)="clickImage('3')" [class.selecionadoN]="'3' === selectedN" tabindex="3">
                         <img src="./../../../assets/img/Ima3.jpg" alt="">
                     </div>
                 </div>
                 <div class="contenedor_especi">
                     <div class="especi_produ">
-                        <!-- <span class="material-icons">
-                        touch_app
-                    </span> -->
                         <img src="./../../../assets/img/ctc.svg" alt="">
                         <p>Customizable Touch Controls</p>
                     </div>
                     <div class="especi_produ">
-                        <!-- <span class="material-icons">
-                        graphic_eq
-                    </span> -->
                         <img src="./../../../assets/img/biesvg.svg" alt="">
                         <p>Built-in Equalizer</p>
                     </div>
                     <div class="especi_produ">
-                        <!-- <span class="material-icons">
-                        volume_up
-                    </span> -->
                         <img src="./../../../assets/img/anc.svg" alt="">
                         <p>Active Noise Cancellation</p>
                     </div>
@@ -83,13 +74,13 @@
                 <p>Choose your finish</p>
             </div>
             <div class="theme">
-                <div class="theme_color" (click)="themeColo('White')" [class.selecionadoT]="'White' === selectedTC">
+                <div class="theme_color" (click)="themeColo('White')" [class.selecionadoT]="'White' === selectedTC" tabindex="4">
                     <p>Ivory White</p>
                     <div class="theme_conte">
                         <p>For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True </p>
                     </div>
                 </div>
-                <div class="theme_color" (click)="themeColo('Black')" [class.selecionadoT]="'Black' === selectedTC">
+                <div class="theme_color" (click)="themeColo('Black')" [class.selecionadoT]="'Black' === selectedTC" tabindex="5">
                     <p>Matte Black</p>
                     <div class="theme_conte">
                         <p>Of all of the celestial bodies that capture our attention and fascination as astronomers</p>
@@ -101,7 +92,7 @@
                 <p>Would you like to add extended warranty coverage?.</p>
             </div>
             <div class="elect_box">
-                <div class="elect_color" *ngFor="let coverage of coverages" (click)="cambioCove(coverage.id)" [class.selectedCo]="coverage.id === selectedCove">
+                <div class="elect_color" *ngFor="let coverage of coverages" (click)="cambioCove(coverage.id)" [class.selectedCo]="coverage.id === selectedCove" tabindex="6">
                     <div class="elect_conte">
                         <p>{{coverage.text}}</p>
                         <p class="elect_conte_e">{{coverage.description}}</p>
@@ -116,7 +107,7 @@
                 <p>Features.</p>
             </div>
             <div class="features_box">
-                <div class="feature_box_conten" *ngFor="let feature of features" (click)="cambioFeatures(feature.id)" [class.selectedFe]="feature.id === selectedFeat">
+                <div class="feature_box_conten" *ngFor="let feature of features" (click)="cambioFeatures(feature.id)" [class.selectedFe]="feature.id === selectedFeat" tabindex="7">
                     <div class="box_contend_fea">
                         <p>{{feature.text}}</p>
                     </div>
@@ -138,60 +129,6 @@
                         {{specification.detalle}}
                     </div>
                 </div>
-                <!-- <div class="bloque_specifi_content">
-                    <div class="content_title">
-                        Dimensions
-                    </div>
-                    <div class="content_especifi">
-                        76.8 x 43.8 x 34.7 mm(earbuds and charging case)
-                    </div>
-                </div>
-
-                <div class="bloque_specifi_content">
-                    <div class="content_title">
-                        USB Standard
-                    </div>
-                    <div class="content_especifi">
-                        USB-C
-                    </div>
-                </div>
-
-                <div class="bloque_specifi_content">
-                    <div class="content_title">
-                        Power supply
-                    </div>
-                    <div class="content_especifi">
-                        Sennheiser 7mm dynamic driver
-                    </div>
-                </div>
-
-                <div class="bloque_specifi_content">
-                    <div class="content_title">
-                        Frequency response (Microphone)
-                    </div>
-                    <div class="content_especifi">
-                        100 Hz to 10 10kHz
-                    </div>
-                </div>
-
-                <div class="bloque_specifi_content">
-                    <div class="content_title">
-                        Frequency response
-                    </div>
-                    <div class="content_especifi">
-                        5 - 21,000 Hz
-                    </div>
-                </div>
-
-                <div class="bloque_specifi_content">
-                    <div class="content_title">
-                        Noise cancellation
-                    </div>
-                    <div class="content_especifi">
-                        Single-Mic ANC per earbud side
-                    </div>
-                </div> -->
-
             </div>
 
             <div class="space">
@@ -218,12 +155,11 @@
 
         <div class="button">
             <div class="bloque">
-                <!-- <div class="bloque_price">$295.95</div> -->
                 <div class="bloque_price">${{precio_total}}</div>
                 <p>Need financing? Learn more</p>
             </div>
             <div class="bloque">
-                <a class="butt" (click)="comprar()">Buy now</a>
+                <a class="butt" (click)="comprar()" tabindex="8">Buy now</a>
             </div>
         </div>
 

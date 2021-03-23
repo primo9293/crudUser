@@ -133,11 +133,11 @@ export class ProductDetailComponent implements OnInit {
 
   cambioCove(num: number){
     this.selectedCove = num;
-    console.log(num);
+    // console.log(num);
     let a = this.coverages.filter(ele => ele.id === num )
-    console.log(a);
+    // console.log(a);
     this.precio_covera = a[0].extended  
-    console.log(this.precio_covera);
+    // console.log(this.precio_covera);
     this.precioTotal()  
   }
 
@@ -150,7 +150,10 @@ export class ProductDetailComponent implements OnInit {
 
   precioTotal(){
     this.precio_total = 0
-    this.precio_total = this.precio_ini + this.selectedCove + this.precio_feature
+    /* console.log('-',this.precio_ini);
+    console.log('*',this.selectedCove);
+    console.log('/',this.precio_feature); */
+    this.precio_total = this.precio_ini + this.precio_covera + this.precio_feature
   }
 
   comprar(){

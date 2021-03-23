@@ -29,7 +29,10 @@
     width: 100%;
     margin-left: 10%;
     margin-right: 1%;
-    display: block;
+    /* display: block; */
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
 }
 
 .col1_contenedor {
@@ -45,8 +48,13 @@
     width: 100%;
 }
 
-.contenedor_imgu:hover {
-    transform: scale(1.5);
+.ima_zoom {
+    transition: transform .5s;
+}
+
+.ima_zoom:hover {
+    transform: scale(1.3);
+    cursor: all-scroll;
 }
 
 .contenedor_imgu img {
@@ -67,37 +75,15 @@
     cursor: pointer;
     width: 100%;
     height: 50%;
-    /* width: 160px;
-    height: 100px; */
-    /* position: absolute;
-    z-index: 1; */
     border: 2px #E5E7E8 solid;
-    /* border-radius: 10px; */
     border-radius: 10px;
 }
 
 .varios_indi img {
-    /* border: 2px #E5E7E8 solid; */
     width: 100%;
     height: 100px;
     border-radius: 10px;
-    /* position: absolute;
-    z-index: 1; */
-    /* width: 100%; */
-    /* width: 100%;
-    height: 50%; */
 }
-
-
-/* .varios_indi img:hover {
-    border: 2px #797A7B solid;
-    border-radius: 10px;
-}
-
-.varios_indi img:active {
-    border: 2px #1798F1 solid;
-    border-radius: 10px;
-} */
 
 .varios_indi:hover {
     border: 2px #797A7B solid;
@@ -105,22 +91,25 @@
 }
 
 .varios_indi:active {
-    border: 2px #1798F1 solid;
+    border: 2px #1798F1 solid !important;
     border-radius: 10px;
+}
+
+.varios_indi:focus {
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px grey;
 }
 
 .contenedor_especi {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 5%;
 }
 
 .contenedor_especi p {
     font-size: 12px;
-    /* font-weight: bold; */
-    /* font-family: "Circular Std Book"; */
     font-family: "Circular Std Medium";
-    /* font-family: "Circular Std Bold"; */
 }
 
 .especi_produ {
@@ -128,7 +117,7 @@
 }
 
 .especi_produ img {
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     width: 30%;
     height: 30%;
 }
@@ -148,15 +137,12 @@
     color: #e16f7f;
     margin-bottom: 0;
     font-size: 12px;
-    /* font-family: "Circular Std Book"; */
     font-family: "Circular Std Medium";
 }
 
 .title h4 {
     color: #82868b;
     font-size: 22px;
-    /* font-family: "Circular Std Medium"; */
-    /* font-family: "Circular Std Bold"; */
     font-family: "Circular Std Book";
 }
 
@@ -172,7 +158,6 @@
     text-align: left;
     margin-bottom: 5px;
     font-family: "Circular Std Book";
-    /* font-family: "Circular Std Medium"; */
 }
 
 .price h1 {
@@ -183,7 +168,6 @@
     text-align: left;
     font-size: 32px;
     margin-bottom: 0;
-    /* font-family: "Circular Std Bold"; */
     font-family: "Circular Std Bold";
     font-weight: bold;
 }
@@ -196,9 +180,7 @@
 .information a {
     margin-right: 25px;
     color: #797A7B;
-    /* font-family: "Circular Std Book"; */
     font-family: "Circular Std Medium";
-    /* font-family: "Circular Std Bold"; */
     font-size: 18px;
     cursor: pointer;
 }
@@ -206,8 +188,6 @@
 .contenido_inform p {
     font-size: 13px;
     color: #797A7B;
-    /* font-family: "Circular Std Book"; */
-    /* font-family: "Circular Std Bold"; */
     font-family: "Circular Std Medium";
 }
 
@@ -236,33 +216,26 @@
     border: 2px gray solid;
 }
 
+.theme_color:focus {
+    outline: none;
+    box-shadow: 0 0 5px grey;
+}
+
 .theme_color p {
-    /* margin-left: 10px; */
     margin: 0px 15px 10px 25px;
     font-weight: bold;
     font-family: "Circular Std Book";
-}
-
-.theme_conte {
-    /*  color: #797A7B;
-    font-size: 12px;
-    font-family: "Circular Std Book"; */
-    /* font-family: "Circular Std Bold"; */
-    /* font-family: "Circular Std Medium"; */
 }
 
 .theme_conte p {
     color: #797A7B;
     font-size: 12px;
     font-family: "Circular Std Book";
-    /* font-family: "Circular Std Bold"; */
-    /* font-family: "Circular Std Medium"; */
 }
 
 .elect {
     margin-top: 10%;
     font-family: "Circular Std Bold";
-    /*     font-weight: bold; */
 }
 
 .elect_box {
@@ -284,6 +257,11 @@
     border-radius: 10px;
 }
 
+.elect_color:focus {
+    outline: none;
+    box-shadow: 0 0 5px grey;
+}
+
 .elect_color p {
     margin-left: 15px;
     margin-top: 10px;
@@ -302,14 +280,11 @@
 }
 
 .elect_conte p {
-    /* font-family: "Circular Std Book"; */
     font-family: "Circular Std Bold";
-    /* font-family: "Circular Std Medium"; */
     margin-left: 10%;
 }
 
 .elect_conte_e {
-    /* font-family: "Circular Std Medium"; */
     font-family: "Circular Std Book";
     font-weight: normal;
     color: #797A7B;
@@ -358,6 +333,11 @@
     border-radius: 10px;
 }
 
+.feature_box_conten:focus {
+    outline: none;
+    box-shadow: 0 0 5px grey;
+}
+
 .feature_box_conten p {
     margin-left: 15px;
     margin-top: 10px;
@@ -368,8 +348,6 @@
 .box_contend_fea {
     margin-right: 10px;
     display: block;
-    /* font-family: "Circular Std Book"; */
-    /* font-family: "Circular Std Bold"; */
     font-family: "Circular Std Medium";
 }
 
@@ -392,8 +370,6 @@
 
 .content_especifi {
     font-family: "Circular Std Book";
-    /* font-family: "Circular Std Bold"; */
-    /* font-family: "Circular Std Medium"; */
 }
 
 .space {
@@ -406,7 +382,8 @@
     height: 12%;
     bottom: 0;
     padding: 20px 0px 0px 0px;
-    background-color: white;
+    background-color: rgb(250, 245, 245);
+    border-top: 1px rgb(189, 186, 186) solid;
 }
 
 .footer_seccion {
@@ -432,9 +409,7 @@
 
 .bloque {
     padding: 10px;
-    /* font-family: "Circular Std Book"; */
     font-family: "Circular Std Bold";
-    /* font-family: "Circular Std Medium"; */
 }
 
 .bloque_price {
@@ -469,13 +444,13 @@
 }
 
 .butt:focus {
-    box-shadow: 2px 4px 10px 0px black;
+    outline: none;
+    box-shadow: 0 0 5px grey;
 }
 
 .selecionado {
     text-decoration: underline;
     text-underline-position: under;
-    /*     text-underline-offset: 3px; */
     color: black !important;
 }
 
@@ -517,32 +492,23 @@
     }
     .col1 {
         margin: 0%;
+        display: block;
+        position: initial;
     }
     .contenedor_imgu:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
     .varios_indi {
         width: 100%;
-        /* height: auto; */
-        /* border: 2px #E5E7E8 solid; */
         border-radius: 10px;
-        /* border-radius: 2222222222222222222;sssssssssssss */
     }
     .varios_indi img {
-        /* width: 130px;
-        height: 80px; */
-        /* border: 2px #E5E7E8 solid; */
         width: 100%;
-        /* max-height: max-content; */
         border: none;
     }
     .contenedor_especi p {
         font-size: 11px;
     }
-    /* .especi_produ img {
-        width: 25%;
-        height: 25%;
-    } */
     .especi_produ p {
         font-size: 10px;
     }
@@ -564,7 +530,7 @@
         display: none;
     }
     .button {
-        margin-right: 12%;
+        margin-right: 15%;
     }
 }
 
@@ -592,6 +558,9 @@
     .content_title {
         font-weight: bold;
     }
+    .contenedor_imgu:hover {
+        transform: scale(1.1);
+    }
     .space {
         margin-bottom: 2%;
     }
@@ -615,10 +584,13 @@
     .bloque_price {
         margin-bottom: 10px;
     }
+    .bloque {
+        left: 80%;
+    }
     .butt {
         text-align: right;
         position: relative;
         top: -4px;
-        left: 80%;
+        left: 72%;
     }
 }
