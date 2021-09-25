@@ -6,3 +6,17 @@ table {
 .icon{
     margin: auto 0.2rem;
 }
+
+.card{
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.example-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon_user{
+    text-align: right;
+}

@@ -1,3 +1,64 @@
+<mat-card class="card">
+    <h3>Usuarios</h3>
+    <form class="example-form">
+        <!--Email-->
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput (keyup)="applyFilter('email')" [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Por favor ingrese un email valido
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email es <strong>requerido</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <!--Usuario-->
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Usuario</mat-label>
+            <input type="text" matInput (keyup)="applyFilter('user')" [formControl]="usuarioFormControl" placeholder="Ex. Juan">
+            <mat-error *ngIf="!usuarioFormControl.hasError('required')">
+              Por favor ingrese un usuario
+            </mat-error>
+            <mat-error *ngIf="usuarioFormControl.hasError('required')">
+                Usuario es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <!--Nombre-->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput [formControl]="nombreFormControl" placeholder="Ex. Juan">
+            <mat-error *ngIf="!nombreFormControl.hasError('required')">
+                Por favor ingrese un nombre
+            </mat-error>
+            <mat-error *ngIf="nombreFormControl.hasError('required')">
+                Nombre es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <!--Apellidos-->
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Apellidos</mat-label>
+            <input type="text" matInput [formControl]="apellidoFormControl" placeholder="Ex. Perez">
+            <mat-error *ngIf="!apellidoFormControl.hasError('required')">
+                Por favor ingrese un apellido
+            </mat-error>
+            <mat-error *ngIf="apellidoFormControl.hasError('required')">
+                Apellido es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+      </form>
+      <div class="icon_user">
+        <button mat-button >
+            <mat-icon color="primary" class="icon">add</mat-icon>
+        </button>
+        <button mat-button >
+            <mat-icon color="primary" class="icon">search</mat-icon>
+        </button>
+      </div>
+</mat-card>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.

@@ -1,11 +1,13 @@
 import {Component, OnInit, ViewChild, Inject } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 /* import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component'; */
 import { MatDialog } from '@angular/material/dialog';
 import { DialogoConfirmacionComponent } from '../dialogo-confirmacion/dialogo-confirmacion.component';
+import { Subscription } from 'rxjs';
 
 
 export interface UserElement {
@@ -55,21 +57,55 @@ export class TableComponent implements OnInit {
   animal: string;
   name: string;
 
+  form: FormGroup;
+
 
   displayedColumns: string[] = ['Id', 'usuario', 'email', 'nombre', 'apellido', 'activo', 'actions'];
   // dataSource = ELEMENT_DATA;
   dataSource = new MatTableDataSource<UserElement>(ELEMENT_DATA);
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
+  emailFormControl = new FormControl('', [Validators.required,Validators.email,]);
+  usuarioFormControl = new FormControl('', [Validators.required,]);
+  nombreFormControl = new FormControl('', [Validators.required,]);
+  apellidoFormControl = new FormControl('', [Validators.required,]);
+
+  // email: Subscription;
+  email: string;
+  user: string;
+  nombre: string;
+  apellido: string;
+
   constructor(
     // public dialogo: MatDialog
     // public dialog: MatDialog
-    ) { }
+    // private formBuilder: FormBuilder
+    ) { 
+    /*   this.buildForm(); */
+    }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
     // console.log(dialog)
+    this.emailFormControl.valueChanges.subscribe((ele => {
+      // console.log(ele)
+      this.email = ele
+    }))
+
+    this.usuarioFormControl.valueChanges.subscribe((ele => {
+      // console.log(ele)
+      this.user = ele
+    }))
   }
+
+  /* private buildForm() {
+    this.form = this.formBuilder.group({
+      emailFormControl: ['', [ Validators.required]],
+      usuarioFormControl: ['', [ Validators.required]],
+      nombreFormControl: ['', [ Validators.required]],
+      apellidoFormControl: ['', [ Validators.required]],
+    });
+  } */
 
   verUser(){
     console.log('ClickVer')
@@ -107,5 +143,52 @@ export class TableComponent implements OnInit {
         }
       }); */
   }
+
+  /* applyFilter(field: string){
+
+  } */
+
+  applyFilter(field: string) {
+    // const filterValue = (event.target as HTMLInputElement).value;
+    // this.dataSource.filter = filterValue.trim().toLowerCase();
+    
+    this.dataSource.filter = this.user.trim().toLowerCase();
+    if (field == 'email') {
+      // this.dataSource.filter = this.email.trim().toLowerCase();
+     /*  console.log(this.dataSource.filteredData.forEach(ele => {
+        ele.email == this.email.trim().toLowerCase();
+      })) 
+      console.log(this.dataSource) */
+     /*  this.dataSource.filteredData.forEach(ele => {
+        // ele.email == this.email.trim().toLowerCase();
+        console.log(ele.email)
+      }) */
+      /* console.log(this.dataSource.filteredData.forEach(ele => {
+        console.log(ele.email.includes(this.email.trim().toLowerCase(),0))
+      })) */
+      /* console.log(this.dataSource.filteredData.forEach(ele => {
+        console.log(ele.email.includes(this.email.trim().toLowerCase(),0))
+      })) */
+    } else if (field == 'user') {
+      // console.log('user')
+      // this.dataSource.filter = this.user.trim().toLowerCase();
+      /* this.dataSource.filteredData.forEach(ele => {
+        ele.usuario == this.user.trim().toLowerCase();
+        // console.log(ele.usuario)
+      }) */
+      /* console.log(this.dataSource.filteredData.forEach(ele => {
+        ele.usuario == this.user.trim().toLowerCase();
+        // console.log(ele.usuario)
+      })) */
+      // console.log(object)
+      /* console.log(this.dataSource.filteredData.forEach(ele => {
+        ele.usuario.trim().toLowerCase() == this.user.trim().toLowerCase();
+      })) */
+      
+      
+    }
+  }
+
+  
 
 }
