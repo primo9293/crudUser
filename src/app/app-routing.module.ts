@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { AuthRoutingModule } from './auth/auth.routing';
 import { DashboardRoutingModule } from './dashboard/dashboard.routing';
 import { PageNotFoundRoutingModule } from './page-not-found/page-not-found-routing.module';
-import { AdminRoutingModule } from './admin/admin.routing';
 import { LayoutComponent } from './layout/layout.component';
-import { GuardGuard } from './guard/guard.guard';
 
 const routes: Routes = [
   {
@@ -25,15 +22,6 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'login',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
-  },
-  {
-    path: 'admin',
-    canActivate: [GuardGuard],
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
-  },
-  {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
   }
@@ -42,11 +30,8 @@ const routes: Routes = [
 @NgModule({
   imports: [CommonModule,
     RouterModule.forRoot(routes,{preloadingStrategy: PreloadAllModules}),
-    // AuthRoutingModule,
     DashboardRoutingModule,
-    AdminRoutingModule,
-    AuthRoutingModule
-    // PageNotFoundRoutingModule
+    PageNotFoundRoutingModule
   ],
   exports: [RouterModule]
 })

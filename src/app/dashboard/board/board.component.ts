@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
+
 
 @Component({
   selector: 'app-board',
@@ -19,28 +19,15 @@ export class BoardComponent implements OnInit {
     what: 'Dos audifonos y cargados'
   }]
 
-  constructor(private productService: ProductService) { }
+  constructor() { }
 
-  datosLo
+
 
   ngOnInit(): void {
-    this.getProductos()
-    this.cargarDatos()
-  }
-
-  cargarDatos(){
-   const carga = setInterval( () => {
-     this.datosLo = this.datos
-    }, 1500);
    
   }
 
-  getProductos(){
-    this.productService.getProductosFire()
-      .subscribe(resp => {
-        console.log(resp);
-        this.productsArr = resp
-      })
-  }
+
+
 
 }
